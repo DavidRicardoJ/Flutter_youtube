@@ -18,9 +18,31 @@ class _InicioState extends State<Inicio> {
     Api api = new Api();
     return api.pesquisar(pesquisa);
   }
-
+/*
+  @override
+  void initState() {
+    super.initState();
+    print('chamado 1 - initState');
+  }
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    print('chamado 2 - didChangeDependencies');
+  }
+  @override
+  void didUpdateWidget(Inicio oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    print('chamado 2 - didUpdateWidget');
+  }
+  @override
+  void dispose() {
+    super.dispose();
+    print('chamado 4 - dispose');
+  }
+*/
   @override
   Widget build(BuildContext context) {
+   // print('chamado 3 - build');
     return FutureBuilder<List<Video>>(
         future: _listarVideos(widget.pesquisa),
         builder: (context, snapshot) {
@@ -45,8 +67,7 @@ class _InicioState extends State<Inicio> {
                               apiKey: CHAVE_YOUTUBE_API,
                               videoId: video.id,
                               autoPlay: true,
-                            fullScreen: true
-                          );
+                              fullScreen: true);
                         },
                         child: Column(
                           children: <Widget>[

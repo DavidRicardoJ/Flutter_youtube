@@ -2,7 +2,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'model/Video.dart';
 
-const CHAVE_YOUTUBE_API = "AIzaSyDaz_ba9qXLprsZNYrGuuYhtgMkssG5CNU";
+const CHAVE_YOUTUBE_API = "AIzaSyBqh2ay5_dg-aK-bJy6K4cZB6tTuI1-5HI";
 const ID_CANAL = "UCwXdFgeE9KYzlDdR7TG9cMw";
 const URL_BASE = "https://www.googleapis.com/youtube/v3/";
 const PARAMETRO_PESQUISA = "search";
